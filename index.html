@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4:3 Monitor Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevent scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        .container {
+            width: 75vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            position: relative;
+        }
+        .left, .right {
+            width: 10%; /* Adjusted to 10% */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center items vertically */
+            align-items: center;
+        }
+        .center {
+            width: 80%; /* Adjusted to 80% */
+            background-color: white;
+            position: relative;
+        }
+        .center iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .left a {
+            color: black;
+            text-decoration: underline;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .left a:hover {
+            color: grey;
+        }
+        .right div {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 48px;
+            color: black;
+            white-space: nowrap;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: grey;
+        }
+        .logo {
+            margin-top: 50px; /* Added margin-top to move the logo down */
+            width: 80%; /* Adjusted width to make the logo smaller */
+        }
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center links vertically */
+            align-items: center;
+            height: 100%; /* Full height to center properly */
+        }
+    </style>
+    <script>
+        const defaultDomain = "./fakeseiten-htmls/Home.html"; // Change this to set the default domain
+
+        function goBack() {
+            document.getElementById('iframe').src = defaultDomain;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('iframe').src = defaultDomain;
+            document.getElementById('iframe').dataset.defaultSrc = defaultDomain;
+
+            const links = document.querySelectorAll('.left a');
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    document.getElementById('iframe').src = this.href;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <button class="back-button" onclick="goBack()">Zurück</button>
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="links-container">
+                <a href="./fakeseiten-htmls/Home.html">Home</a>
+                <a href="https://search.acu.li">Internet</a>
+                <a href="./fakeseiten-htmls/Shopping.html">Shopping</a>
+                <a href="./fakeseiten-htmls/Computer.html">Computer</a>
+                <a href="./fakeseiten-htmls/Games.html">Games</a>
+                <a href="./fakeseiten-htmls/News.html">News</a>
+                <a href="./fakeseiten-htmls/Youtube.html">Youtube</a>
+                <a href="./fakeseiten-htmls/E-Mail.html">E-Mail</a>
+                <a href="./fakeseiten-htmls/Wetter.html">Wetter</a>
+                <a href="./fakeseiten-htmls/Online-Banking.html">Online-Banking</a>
+                <a href="./fakeseiten-htmls/Rezepte.html">Rezepte</a>
+                <a href="./fakeseiten-htmls/Reisen.html">Reisen</a>
+                <a href="./fakeseiten-htmls/Auto-Markt.html">Auto-Markt</a>
+                <a href="./fakeseiten-htmls/TV-Programm.html">TV-Programm</a>
+                <a href="./fakeseiten-htmls/Kleinanzeigen.html">Kleinanzeigen</a>
+                <a href="./fakeseiten-htmls/Partnerbörse.html">Partnerbörse</a>
+                <a href="./fakeseiten-htmls/Fitness_&_Gesundheit.html">Gesundheit</a>
+                <a href="./fakeseiten-htmls/Wissenschaft.html">Wissenschaft</a>                
+            </div>
+        </div>
+        <div class="center">
+            <iframe id="iframe" data-default-src=""></iframe>
+        </div>
+        <div class="right">
+            <div>I N T E R N E T</div>
+        </div>
+    </div>
+</body>
+</html>
