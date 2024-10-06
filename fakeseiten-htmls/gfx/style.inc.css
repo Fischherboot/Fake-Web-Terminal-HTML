@@ -1,0 +1,131 @@
+html,body{
+        height                  :100%;
+	width                   :100%;
+	margin                  :0px;
+	padding                 :0px;
+	color                   :black;
+	font-family             :Verdana,sans-serif;
+	font-size               :10pt;
+	background-color	:#446F41;
+}
+
+#content{
+	position		:absolute; 
+	top			:75pt; 
+	left			:0pt; 
+	right			:10pt; 
+	bottom			:0pt;
+}
+
+td.navtop{
+	text-align		:center;
+	font-size		:10pt;
+	width			:100%;
+	background-color	:#588F54; 
+	font-size		:8pt; 
+	border			:1pt solid #1F391D;
+}
+
+td.shopnav{
+	font-weight		:none;
+	font-size		:8pt;
+	text-align		:left;
+}
+
+td.shopov{
+	text-align              :center;
+        font-size               :10pt;
+        background-color        :#588F54;
+        padding			:5pt;
+	font-size               :8pt;
+        border                  :1pt solid #1F391D;
+}
+a.nav{
+	color			:white;
+}
+
+a.shopnav{
+	text-decoration         :none;
+        color                   :white;
+}
+
+a{
+        color                   :white;
+        text-decoration         :none;
+}
+
+a:hover{
+	text-decoration		:underline;
+}
+
+input.tinput{
+	background-color        :#588F54;
+	border			:1pt solid white;
+	color			:white;
+}
+
+input.submit{
+	background-color        :#588F54;
+	font-size		:10pt;
+	width			:100pt;
+	border			:1pt solid white;
+	color			:white;
+	font-weight		:bold;
+}
+
+td.amenue{
+	background-color        :#588F54;
+	text-align		:center;
+	border			:1pt solid white;
+	font-size		:10pt;
+}
+
+input.inputaa{
+	border			:1pt solid black;
+	width			:150pt;
+}
+
+.inputsa{
+	border                  :1pt solid black;
+	width			:200pt;
+}
+
+td.adlist{
+	border			:1pt solid white;
+	background-color        :#588F54;
+	text-align		:left;
+	padding-left		:2pt;
+}
+
+input.issubmit{
+	text-decoration		:none;
+	border:1pt solid	:white;
+	width			:50pt;
+	background-color	:#588F54;
+	color			:white;
+}
+
+.isupp{
+	width			:200pt;
+}
+
+td.supporto{
+	text-align		:left;
+	padding-left		:3pt;
+	background-color        :#446F41;
+	border			:1pt solid white;
+	font-weight		:bold;
+	width			:120pt;
+}
+
+td.supportu{
+	text-align		:left;
+	padding			:3pt;
+	border			:1pt solid white;
+}
+
+input.anfahrti{
+	border			:1pt solid black;
+	width			:150pt;
+	background-color	:white;
+}
